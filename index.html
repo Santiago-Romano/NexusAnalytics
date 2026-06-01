@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusAnalytics — Business Intelligence Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-mark">N</div>
+      <div class="logo-text">Nexus<span>Analytics</span></div>
+    </div>
+
+    <nav>
+      <div class="nav-section">Principal</div>
+
+      <div class="nav-item active" data-page="dashboard-section">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        Dashboard
+      </div>
+
+      <div class="nav-item" data-page="analytics-section">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        Analytics
+      </div>
+
+      <div class="nav-item" data-page="reportes-section">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+        </svg>
+        Reportes
+      </div>
+
+      <div class="nav-section">Gestión</div>
+
+      <div class="nav-item" data-page="clientes-section">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Clientes
+      </div>
+
+      <div class="nav-item" data-page="ventas-section">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="1" x2="12" y2="23"/>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        Ventas
+      </div>
+
+      <div class="nav-item" data-page="productos-section">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+        </svg>
+        Productos
+      </div>
+
+      <div class="nav-section">Config</div>
+
+      <div class="nav-item" data-page="integraciones-section">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+        </svg>
+        Integraciones
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar">AG</div>
+        <div>
+          <div class="user-name">Ana García</div>
+          <div class="user-role">Admin · Pro Plan</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ══ TOPBAR ══ -->
+  <header class="topbar">
+    <div class="page-title">Business <span>Dashboard</span></div>
+    <div class="topbar-right">
+      <div class="date-badge"><span class="live-dot"></span>LIVE · May 2026</div>
+      <button class="btn btn-primary">+ Exportar</button>
+    </div>
+  </header>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+
+    <!-- ── DASHBOARD ── -->
+    <section class="page active" id="dashboard-section">
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Ingresos Totales</div>
+          <div class="kpi-value" style="color:var(--accent)">$2.4M</div>
+          <div class="kpi-change up">▲ 18.3% vs mes anterior</div>
+          <div class="sparkbar-wrap" style="margin-top:16px">
+            <div class="sparkbar" style="height:40%;background:var(--accent)"></div>
+            <div class="sparkbar" style="height:55%;background:var(--accent)"></div>
+            <div class="sparkbar" style="height:45%;background:var(--accent)"></div>
+            <div class="sparkbar" style="height:70%;background:var(--accent)"></div>
+            <div class="sparkbar" style="height:60%;background:var(--accent)"></div>
+            <div class="sparkbar" style="height:80%;background:var(--accent)"></div>
+            <div class="sparkbar" style="height:100%;background:var(--accent)"></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Clientes Activos</div>
+          <div class="kpi-value" style="color:var(--green)">1,847</div>
+          <div class="kpi-change up">▲ 12.1% nuevos registros</div>
+          <div class="sparkbar-wrap" style="margin-top:16px">
+            <div class="sparkbar" style="height:50%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:60%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:55%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:75%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:65%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:85%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:100%;background:var(--green)"></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Tasa de Conversión</div>
+          <div class="kpi-value" style="color:var(--accent2)">3.68%</div>
+          <div class="kpi-change down">▼ 0.4% vs semana pasada</div>
+          <div class="sparkbar-wrap" style="margin-top:16px">
+            <div class="sparkbar" style="height:90%;background:var(--accent2)"></div>
+            <div class="sparkbar" style="height:85%;background:var(--accent2)"></div>
+            <div class="sparkbar" style="height:100%;background:var(--accent2)"></div>
+            <div class="sparkbar" style="height:80%;background:var(--accent2)"></div>
+            <div class="sparkbar" style="height:75%;background:var(--accent2)"></div>
+            <div class="sparkbar" style="height:70%;background:var(--accent2)"></div>
+            <div class="sparkbar" style="height:72%;background:var(--accent2)"></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">NPS Score</div>
+          <div class="kpi-value" style="color:var(--yellow)">74</div>
+          <div class="kpi-change up">▲ 6 puntos · Excelente</div>
+          <div class="sparkbar-wrap" style="margin-top:16px">
+            <div class="sparkbar" style="height:60%;background:var(--yellow)"></div>
+            <div class="sparkbar" style="height:65%;background:var(--yellow)"></div>
+            <div class="sparkbar" style="height:70%;background:var(--yellow)"></div>
+            <div class="sparkbar" style="height:72%;background:var(--yellow)"></div>
+            <div class="sparkbar" style="height:78%;background:var(--yellow)"></div>
+            <div class="sparkbar" style="height:85%;background:var(--yellow)"></div>
+            <div class="sparkbar" style="height:100%;background:var(--yellow)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-row">
+
+        <!-- Line Chart -->
+        <div class="card" style="animation-delay:0.5s">
+          <div class="card-header">
+            <div class="card-title">Evolución de Ingresos — 2026</div>
+            <div class="card-badge">Últimos 7 meses</div>
+          </div>
+          <div class="chart-wrap">
+            <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="lineGrad2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ff3d7f" stop-opacity="0.15"/>
+                  <stop offset="100%" stop-color="#ff3d7f" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="50"  x2="600" y2="50"  stroke="#1a2236" stroke-width="1"/>
+              <line x1="0" y1="100" x2="600" y2="100" stroke="#1a2236" stroke-width="1"/>
+              <line x1="0" y1="150" x2="600" y2="150" stroke="#1a2236" stroke-width="1"/>
+              <path d="M30,160 L110,130 L195,100 L280,80 L365,90 L450,55 L535,30 L535,190 L30,190 Z" fill="url(#lineGrad)"/>
+              <path d="M30,170 L110,155 L195,140 L280,130 L365,120 L450,115 L535,100 L535,190 L30,190 Z" fill="url(#lineGrad2)"/>
+              <polyline points="30,160 110,130 195,100 280,80 365,90 450,55 535,30"
+                        fill="none" stroke="#00e5ff" stroke-width="2.5" stroke-linejoin="round"/>
+              <polyline points="30,170 110,155 195,140 280,130 365,120 450,115 535,100"
+                        fill="none" stroke="#ff3d7f" stroke-width="2" stroke-linejoin="round" stroke-dasharray="5,3"/>
+              <circle cx="30"  cy="160" r="4" fill="#00e5ff"/>
+              <circle cx="110" cy="130" r="4" fill="#00e5ff"/>
+              <circle cx="195" cy="100" r="4" fill="#00e5ff"/>
+              <circle cx="280" cy="80"  r="4" fill="#00e5ff"/>
+              <circle cx="365" cy="90"  r="4" fill="#00e5ff"/>
+              <circle cx="450" cy="55"  r="4" fill="#00e5ff"/>
+              <circle cx="535" cy="30"  r="6" fill="#00e5ff" stroke="#080c12" stroke-width="2"/>
+              <text x="30"  y="195" font-family="DM Mono" font-size="10" fill="#4a5568" text-anchor="middle">Nov</text>
+              <text x="110" y="195" font-family="DM Mono" font-size="10" fill="#4a5568" text-anchor="middle">Dic</text>
+              <text x="195" y="195" font-family="DM Mono" font-size="10" fill="#4a5568" text-anchor="middle">Ene</text>
+              <text x="280" y="195" font-family="DM Mono" font-size="10" fill="#4a5568" text-anchor="middle">Feb</text>
+              <text x="365" y="195" font-family="DM Mono" font-size="10" fill="#4a5568" text-anchor="middle">Mar</text>
+              <text x="450" y="195" font-family="DM Mono" font-size="10" fill="#4a5568" text-anchor="middle">Abr</text>
+              <text x="535" y="195" font-family="DM Mono" font-size="10" fill="#00e5ff" text-anchor="middle">May</text>
+              <rect x="420" y="10" width="8" height="3" rx="1" fill="#00e5ff"/>
+              <text x="432" y="15" font-family="DM Mono" font-size="9" fill="#e2e8f0">Ingresos</text>
+              <rect x="420" y="24" width="8" height="3" rx="1" fill="#ff3d7f"/>
+              <text x="432" y="29" font-family="DM Mono" font-size="9" fill="#e2e8f0">Gastos</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Donut Chart -->
+        <div class="card" style="animation-delay:0.6s">
+          <div class="card-header">
+            <div class="card-title">Canales de Venta</div>
+            <div class="card-badge">Mayo 2026</div>
+          </div>
+          <div class="donut-wrap">
+            <svg viewBox="0 0 140 140" width="140" height="140">
+              <circle cx="70" cy="70" r="55" fill="none" stroke="#1a2236" stroke-width="20"/>
+              <circle cx="70" cy="70" r="55" fill="none" stroke="#00e5ff" stroke-width="20"
+                      stroke-dasharray="207 138" stroke-dashoffset="0" transform="rotate(-90 70 70)"/>
+              <circle cx="70" cy="70" r="55" fill="none" stroke="#7c3aed" stroke-width="20"
+                      stroke-dasharray="100 245" stroke-dashoffset="-207" transform="rotate(-90 70 70)"/>
+              <circle cx="70" cy="70" r="55" fill="none" stroke="#ff3d7f" stroke-width="20"
+                      stroke-dasharray="55 290" stroke-dashoffset="-307" transform="rotate(-90 70 70)"/>
+              <circle cx="70" cy="70" r="55" fill="none" stroke="#f59e0b" stroke-width="20"
+                      stroke-dasharray="38 307" stroke-dashoffset="-362" transform="rotate(-90 70 70)"/>
+              <text x="70" y="67" text-anchor="middle" font-family="Syne" font-size="18" font-weight="800" fill="#e2e8f0">60%</text>
+              <text x="70" y="82" text-anchor="middle" font-family="DM Mono" font-size="9" fill="#4a5568">DIGITAL</text>
+            </svg>
+            <div class="donut-legend">
+              <div class="legend-item">
+                <div class="legend-left"><div class="legend-dot" style="background:var(--accent)"></div><span class="legend-name">Digital / Web</span></div>
+                <span class="legend-val">60%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-left"><div class="legend-dot" style="background:var(--accent3)"></div><span class="legend-name">Ventas directas</span></div>
+                <span class="legend-val">29%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-left"><div class="legend-dot" style="background:var(--accent2)"></div><span class="legend-name">Partners</span></div>
+                <span class="legend-val">16%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-left"><div class="legend-dot" style="background:var(--yellow)"></div><span class="legend-name">Distribuidores</span></div>
+                <span class="legend-val">11%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="bottom-row">
+
+        <!-- Tabla contratos -->
+        <div class="card" style="animation-delay:0.7s">
+          <div class="card-header">
+            <div class="card-title">Contratos Recientes</div>
+            <div class="card-badge">Ver todos →</div>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Cliente</th><th>Valor</th><th>Estado</th><th>Fecha</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TechCorp SA</td><td>$84,000</td>
+                <td><span class="status-pill active">Activo</span></td>
+                <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">12 May</td>
+              </tr>
+              <tr>
+                <td>Inversiones Norte</td><td>$210,500</td>
+                <td><span class="status-pill active">Activo</span></td>
+                <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">08 May</td>
+              </tr>
+              <tr>
+                <td>Grupo Alcántara</td><td>$47,200</td>
+                <td><span class="status-pill pending">Pendiente</span></td>
+                <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">05 May</td>
+              </tr>
+              <tr>
+                <td>Logística Sur</td><td>$130,000</td>
+                <td><span class="status-pill active">Activo</span></td>
+                <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">01 May</td>
+              </tr>
+              <tr>
+                <td>Distribuidora MX</td><td>$28,750</td>
+                <td><span class="status-pill closed">Cerrado</span></td>
+                <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">28 Abr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Feed actividad -->
+        <div class="card" style="animation-delay:0.8s">
+          <div class="card-header">
+            <div class="card-title">Actividad Reciente</div>
+            <div class="card-badge"><span class="live-dot"></span>En vivo</div>
+          </div>
+          <div class="feed">
+            <div class="feed-item">
+              <div class="feed-icon" style="background:rgba(0,229,255,0.08);color:var(--accent)">💼</div>
+              <div>
+                <div class="feed-text">Nuevo contrato firmado con <strong>TechCorp SA</strong> por $84,000</div>
+                <div class="feed-time">Hace 2 horas</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-icon" style="background:rgba(16,185,129,0.08);color:var(--green)">👤</div>
+              <div>
+                <div class="feed-text">37 nuevos registros en el portal de clientes</div>
+                <div class="feed-time">Hace 4 horas</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-icon" style="background:rgba(245,158,11,0.08);color:var(--yellow)">📊</div>
+              <div>
+                <div class="feed-text">Reporte mensual Q2 generado y enviado al equipo</div>
+                <div class="feed-time">Hace 6 horas</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-icon" style="background:rgba(124,58,237,0.08);color:var(--accent3)">🔗</div>
+              <div>
+                <div class="feed-text">Integración con Salesforce completada exitosamente</div>
+                <div class="feed-time">Ayer, 15:30</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-icon" style="background:rgba(255,61,127,0.08);color:var(--accent2)">⚠️</div>
+              <div>
+                <div class="feed-text">Alerta: Conversión baja en campaña <strong>Email Q2</strong></div>
+                <div class="feed-time">Ayer, 09:12</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── ANALYTICS ── -->
+    <section class="page" id="analytics-section">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Analytics Avanzados</div>
+          <div class="card-badge">Tiempo real</div>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Usuarios Online</div>
+            <div class="kpi-value" style="color:var(--accent)">12,847</div>
+            <div class="kpi-change up">▲ 22% crecimiento</div>
+            <div class="sparkbar-wrap" style="margin-top:16px">
+              <div class="sparkbar" style="height:40%;background:var(--accent)"></div>
+              <div class="sparkbar" style="height:55%;background:var(--accent)"></div>
+              <div class="sparkbar" style="height:70%;background:var(--accent)"></div>
+              <div class="sparkbar" style="height:65%;background:var(--accent)"></div>
+              <div class="sparkbar" style="height:80%;background:var(--accent)"></div>
+              <div class="sparkbar" style="height:90%;background:var(--accent)"></div>
+              <div class="sparkbar" style="height:100%;background:var(--accent)"></div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">CTR Promedio</div>
+            <div class="kpi-value" style="color:var(--accent2)">7.2%</div>
+            <div class="kpi-change down">▼ 0.3% esta semana</div>
+            <div class="sparkbar-wrap" style="margin-top:16px">
+              <div class="sparkbar" style="height:100%;background:var(--accent2)"></div>
+              <div class="sparkbar" style="height:90%;background:var(--accent2)"></div>
+              <div class="sparkbar" style="height:85%;background:var(--accent2)"></div>
+              <div class="sparkbar" style="height:80%;background:var(--accent2)"></div>
+              <div class="sparkbar" style="height:75%;background:var(--accent2)"></div>
+              <div class="sparkbar" style="height:72%;background:var(--accent2)"></div>
+              <div class="sparkbar" style="height:70%;background:var(--accent2)"></div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Engagement</div>
+            <div class="kpi-value" style="color:var(--green)">84%</div>
+            <div class="kpi-change up">▲ Excelente</div>
+            <div class="sparkbar-wrap" style="margin-top:16px">
+              <div class="sparkbar" style="height:60%;background:var(--green)"></div>
+              <div class="sparkbar" style="height:65%;background:var(--green)"></div>
+              <div class="sparkbar" style="height:70%;background:var(--green)"></div>
+              <div class="sparkbar" style="height:75%;background:var(--green)"></div>
+              <div class="sparkbar" style="height:80%;background:var(--green)"></div>
+              <div class="sparkbar" style="height:82%;background:var(--green)"></div>
+              <div class="sparkbar" style="height:84%;background:var(--green)"></div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Bounce Rate</div>
+            <div class="kpi-value" style="color:var(--yellow)">31%</div>
+            <div class="kpi-change up">▲ Optimizado</div>
+            <div class="sparkbar-wrap" style="margin-top:16px">
+              <div class="sparkbar" style="height:70%;background:var(--yellow)"></div>
+              <div class="sparkbar" style="height:60%;background:var(--yellow)"></div>
+              <div class="sparkbar" style="height:55%;background:var(--yellow)"></div>
+              <div class="sparkbar" style="height:50%;background:var(--yellow)"></div>
+              <div class="sparkbar" style="height:42%;background:var(--yellow)"></div>
+              <div class="sparkbar" style="height:35%;background:var(--yellow)"></div>
+              <div class="sparkbar" style="height:31%;background:var(--yellow)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Tráfico por Fuente</div>
+          <div class="card-badge">Mayo 2026</div>
+        </div>
+        <div class="chart-wrap">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="40"  x2="600" y2="40"  stroke="#1a2236" stroke-width="1"/>
+            <line x1="0" y1="90"  x2="600" y2="90"  stroke="#1a2236" stroke-width="1"/>
+            <line x1="0" y1="140" x2="600" y2="140" stroke="#1a2236" stroke-width="1"/>
+            <!-- Orgánico -->
+            <rect x="40"  y="50"  width="40" height="90"  rx="4" fill="#00e5ff" opacity="0.8"/>
+            <!-- Paid -->
+            <rect x="130" y="70"  width="40" height="70"  rx="4" fill="#7c3aed" opacity="0.8"/>
+            <!-- Social -->
+            <rect x="220" y="80"  width="40" height="60"  rx="4" fill="#ff3d7f" opacity="0.8"/>
+            <!-- Email -->
+            <rect x="310" y="95"  width="40" height="45"  rx="4" fill="#f59e0b" opacity="0.8"/>
+            <!-- Directo -->
+            <rect x="400" y="60"  width="40" height="80"  rx="4" fill="#10b981" opacity="0.8"/>
+            <!-- Referral -->
+            <rect x="490" y="100" width="40" height="40"  rx="4" fill="#00e5ff" opacity="0.4"/>
+            <text x="60"  y="158" font-family="DM Mono" font-size="9" fill="#4a5568" text-anchor="middle">Orgánico</text>
+            <text x="150" y="158" font-family="DM Mono" font-size="9" fill="#4a5568" text-anchor="middle">Paid</text>
+            <text x="240" y="158" font-family="DM Mono" font-size="9" fill="#4a5568" text-anchor="middle">Social</text>
+            <text x="330" y="158" font-family="DM Mono" font-size="9" fill="#4a5568" text-anchor="middle">Email</text>
+            <text x="420" y="158" font-family="DM Mono" font-size="9" fill="#4a5568" text-anchor="middle">Directo</text>
+            <text x="510" y="158" font-family="DM Mono" font-size="9" fill="#4a5568" text-anchor="middle">Referral</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── REPORTES ── -->
+    <section class="page" id="reportes-section">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Reportes Generados</div>
+          <div class="card-badge">Q2 2026</div>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Reporte</th><th>Tipo</th><th>Estado</th><th>Fecha</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reporte Financiero Q2</td><td style="color:var(--muted)">Finanzas</td>
+              <td><span class="status-pill active">Listo</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">12 May</td>
+            </tr>
+            <tr>
+              <td>Reporte Marketing</td><td style="color:var(--muted)">Marketing</td>
+              <td><span class="status-pill pending">Procesando</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">10 May</td>
+            </tr>
+            <tr>
+              <td>Reporte de Clientes</td><td style="color:var(--muted)">CRM</td>
+              <td><span class="status-pill closed">Archivado</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">08 May</td>
+            </tr>
+            <tr>
+              <td>Análisis de Conversión</td><td style="color:var(--muted)">Analytics</td>
+              <td><span class="status-pill active">Listo</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">05 May</td>
+            </tr>
+            <tr>
+              <td>Reporte de Productos</td><td style="color:var(--muted)">Inventario</td>
+              <td><span class="status-pill pending">Procesando</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">02 May</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── CLIENTES ── -->
+    <section class="page" id="clientes-section">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Total Clientes</div>
+          <div class="kpi-value" style="color:var(--accent)">1,847</div>
+          <div class="kpi-change up">▲ 12.1% este mes</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Clientes Nuevos</div>
+          <div class="kpi-value" style="color:var(--green)">224</div>
+          <div class="kpi-change up">▲ Mayo 2026</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Churn Rate</div>
+          <div class="kpi-value" style="color:var(--accent2)">1.8%</div>
+          <div class="kpi-change down">▼ Bajo control</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">LTV Promedio</div>
+          <div class="kpi-value" style="color:var(--yellow)">$4.2K</div>
+          <div class="kpi-change up">▲ 8% trimestral</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Listado de Clientes</div>
+          <div class="card-badge">1,847 activos</div>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Cliente</th><th>Empresa</th><th>Plan</th><th>Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ana García</td><td>TechCorp SA</td><td style="color:var(--muted)">Pro</td>
+              <td><span class="status-pill active">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Carlos Méndez</td><td>Nexus Labs</td><td style="color:var(--muted)">Starter</td>
+              <td><span class="status-pill pending">Pendiente</span></td>
+            </tr>
+            <tr>
+              <td>Lucía Torres</td><td>Quantum SA</td><td style="color:var(--muted)">Enterprise</td>
+              <td><span class="status-pill active">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Marco Ruiz</td><td>Inversiones Norte</td><td style="color:var(--muted)">Pro</td>
+              <td><span class="status-pill active">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Sofía Villanueva</td><td>Grupo Alcántara</td><td style="color:var(--muted)">Starter</td>
+              <td><span class="status-pill closed">Inactivo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── VENTAS ── -->
+    <section class="page" id="ventas-section">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Ventas Totales</div>
+          <div class="kpi-value" style="color:var(--green)">$847K</div>
+          <div class="kpi-change up">▲ 21% vs mes anterior</div>
+          <div class="sparkbar-wrap" style="margin-top:16px">
+            <div class="sparkbar" style="height:50%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:60%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:65%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:75%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:80%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:90%;background:var(--green)"></div>
+            <div class="sparkbar" style="height:100%;background:var(--green)"></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Órdenes</div>
+          <div class="kpi-value" style="color:var(--accent)">4,203</div>
+          <div class="kpi-change up">▲ 9% vs mes anterior</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Ticket Promedio</div>
+          <div class="kpi-value" style="color:var(--yellow)">$201</div>
+          <div class="kpi-change up">▲ 11% de mejora</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Meta Mensual</div>
+          <div class="kpi-value" style="color:var(--accent2)">85%</div>
+          <div class="kpi-change up">▲ En camino</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Últimas Ventas</div>
+          <div class="card-badge">Mayo 2026</div>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Cliente</th><th>Producto</th><th>Monto</th><th>Estado</th><th>Fecha</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>TechCorp SA</td><td>Analytics Pro</td><td>$84,000</td>
+              <td><span class="status-pill active">Pagado</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">12 May</td>
+            </tr>
+            <tr>
+              <td>Inversiones Norte</td><td>Enterprise Plan</td><td>$210,500</td>
+              <td><span class="status-pill active">Pagado</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">08 May</td>
+            </tr>
+            <tr>
+              <td>Grupo Alcántara</td><td>Starter Plan</td><td>$47,200</td>
+              <td><span class="status-pill pending">Pendiente</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">05 May</td>
+            </tr>
+            <tr>
+              <td>Logística Sur</td><td>Analytics Pro</td><td>$130,000</td>
+              <td><span class="status-pill active">Pagado</span></td>
+              <td style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">01 May</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── PRODUCTOS ── -->
+    <section class="page" id="productos-section">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Productos Activos</div>
+          <div class="kpi-value" style="color:var(--accent)">12</div>
+          <div class="kpi-change up">▲ 2 nuevos este mes</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Más Vendido</div>
+          <div class="kpi-value" style="color:var(--green);font-size:22px">Analytics Pro</div>
+          <div class="kpi-change up">▲ 1,240 licencias</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Stock Bajo</div>
+          <div class="kpi-value" style="color:var(--accent2)">3</div>
+          <div class="kpi-change down">▼ Requiere atención</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Revenue por Producto</div>
+          <div class="kpi-value" style="color:var(--yellow)">$70K</div>
+          <div class="kpi-change up">▲ Promedio mensual</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Inventario de Productos</div>
+          <div class="card-badge">Mayo 2026</div>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Producto</th><th>Categoría</th><th>Stock</th><th>Precio</th><th>Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nexus Cloud</td><td style="color:var(--muted)">Infraestructura</td><td>234</td><td>$299/mo</td>
+              <td><span class="status-pill active">Disponible</span></td>
+            </tr>
+            <tr>
+              <td>Analytics Pro</td><td style="color:var(--muted)">Analytics</td><td>12</td><td>$899/mo</td>
+              <td><span class="status-pill pending">Stock bajo</span></td>
+            </tr>
+            <tr>
+              <td>DataBridge API</td><td style="color:var(--muted)">Integración</td><td>580</td><td>$149/mo</td>
+              <td><span class="status-pill active">Disponible</span></td>
+            </tr>
+            <tr>
+              <td>Enterprise Suite</td><td style="color:var(--muted)">Enterprise</td><td>8</td><td>Custom</td>
+              <td><span class="status-pill pending">Stock bajo</span></td>
+            </tr>
+            <tr>
+              <td>Nexus Lite</td><td style="color:var(--muted)">Starter</td><td>0</td><td>$49/mo</td>
+              <td><span class="status-pill closed">Sin stock</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── INTEGRACIONES ── -->
+    <section class="page" id="integraciones-section">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">APIs Conectadas</div>
+          <div class="kpi-value" style="color:var(--accent)">8</div>
+          <div class="kpi-change up">▲ Todas operativas</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Uptime Promedio</div>
+          <div class="kpi-value" style="color:var(--green)">99.9%</div>
+          <div class="kpi-change up">▲ Excelente</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Requests / día</div>
+          <div class="kpi-value" style="color:var(--yellow)">2.4M</div>
+          <div class="kpi-change up">▲ 18% más que ayer</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Errores</div>
+          <div class="kpi-value" style="color:var(--accent2)">0.01%</div>
+          <div class="kpi-change up">▲ Bajo umbral</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Integraciones Activas</div>
+          <div class="card-badge">APIs conectadas</div>
+        </div>
+        <div class="feed">
+          <div class="feed-item">
+            <div class="feed-icon" style="background:rgba(0,229,255,0.08);color:var(--accent)">🔗</div>
+            <div>
+              <div class="feed-text"><strong>Salesforce</strong> — CRM sincronizado correctamente</div>
+              <div class="feed-time">Activo · Última sync hace 2 min</div>
+            </div>
+          </div>
+          <div class="feed-item">
+            <div class="feed-icon" style="background:rgba(16,185,129,0.08);color:var(--green)">☁️</div>
+            <div>
+              <div class="feed-text"><strong>AWS S3</strong> — Almacenamiento en la nube operativo</div>
+              <div class="feed-time">Activo · Hace 5 min</div>
+            </div>
+          </div>
+          <div class="feed-item">
+            <div class="feed-icon" style="background:rgba(124,58,237,0.08);color:var(--accent3)">📧</div>
+            <div>
+              <div class="feed-text"><strong>SendGrid</strong> — Email marketing conectado</div>
+              <div class="feed-time">Activo · Hace 12 min</div>
+            </div>
+          </div>
+          <div class="feed-item">
+            <div class="feed-icon" style="background:rgba(245,158,11,0.08);color:var(--yellow)">💳</div>
+            <div>
+              <div class="feed-text"><strong>Stripe</strong> — Pasarela de pagos operativa</div>
+              <div class="feed-time">Activo · Hace 1 hora</div>
+            </div>
+          </div>
+          <div class="feed-item">
+            <div class="feed-icon" style="background:rgba(255,61,127,0.08);color:var(--accent2)">📊</div>
+            <div>
+              <div class="feed-text"><strong>Google Analytics</strong> — Tracking de eventos activo</div>
+              <div class="feed-time">Activo · Hace 3 horas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
