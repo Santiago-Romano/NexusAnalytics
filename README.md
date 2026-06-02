@@ -20,6 +20,9 @@ All data, metrics, company names, clients, contracts, and statistics displayed w
 Nexus Analytics does not use real information and has no affiliation with any existing company, organization, or individual.
 Any resemblance to real entities is purely coincidental.
 
+Here is the link to the page so you can try it out:
+https://nexusanalitycs.netlify.app/
+
 Español:
 
 ¿Para qué sirve?
@@ -41,3 +44,7 @@ Aviso:
 Este proyecto fue desarrollado con fines educativos y de demostración. Todos los datos, métricas, nombres de empresas, clientes, contratos y estadísticas mostrados dentro de la aplicación son completamente ficticios y fueron creados únicamente para ilustrar el funcionamiento de la plataforma.
 Nexus Analytics no utiliza información real ni mantiene relación con ninguna empresa, organización o persona existente.
 Cualquier similitud con entidades reales es mera coincidencia.
+
+
+Aquí tienes el enlace a la página para que puedas probarlo:
+https://nexusanalitycs.netlify.app/
