@@ -66,7 +66,7 @@ Para este prototipo, los datos presentados en el dashboard (KPIs, contratos, act
 
 - Facilitar el desarrollo y la depuración del frontend sin depender de un backend activo.
 
-- Preparar la aplicación para una integración futura y directa con una API REST full real, ya que la estructura del código está diseñada para desacoplar la capa de presentación de la capa de datos. Las funciones de filtrado y actualización de la UI están construidas para interactuar con un modelo de datos que puede ser fácilmente reemplazado por llamadas a un servicio de backend.
+- Preparar la aplicación para una integración futura y directa con una API RESTful real, ya que la estructura del código está diseñada para desacoplar la capa de presentación de la capa de datos. Las funciones de filtrado y actualización de la UI están construidas para interactuar con un modelo de datos que puede ser fácilmente reemplazado por llamadas a un servicio de backend.
 
 Aquí tienes el enlace a la página para que puedas probarlo:
 https://nexusanalitycs.netlify.app/
