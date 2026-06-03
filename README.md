@@ -1,24 +1,42 @@
 English:
 
-What is it for? 
-Nexus Analytics is a business monitoring platform designed to provide executives and managers with a consolidated view of organizational performance. 
-It allows access to key metrics and real-time visual reports from a single interface, reducing reliance on spreadsheets and manual reporting.
+Overview:Nexus Analytics is an interactive and responsive business monitoring platform designed to provide executives and managers with a consolidated, real-time view of organizational performance. Its objective is to centralize key metrics and visual reports in a single interface, minimizing reliance on spreadsheets and manual reporting processes. This project demonstrates the ability to build complex and functional user interfaces, with a focus on data visualization and interactivity.
 
-How does it work? 
-The application is organized into three main areas. 
-On the left is a navigation menu with modules such as Analytics, Reports, Customers, and Sales, simulating the structure of a real business platform. 
-At the top is a status bar with real-time update indicators. 
+Key Features:
 
-The main dashboard presents information at four levels: 
-- Strategic KPIs: revenue, active customers, conversion rate, and NPS, accompanied by visual trend indicators.
-- Financial analysis: a comparative chart of revenue and expenses to evaluate the monthly evolution of the business.
-- Channel distribution: visualization of sales sources through a pie chart.
-- Operational activity: a table of recent contracts and a chronological record of relevant events within the organization.
+- Interactive Dashboard: Presentation of strategic KPIs (revenue, active clients, conversion rate, NPS) with visual trend indicators.
 
-Notice: This project was developed for educational and demonstration purposes.
-All data, metrics, company names, clients, contracts, and statistics displayed within the application are entirely fictitious and were created solely to illustrate the platform's functionality.
-Nexus Analytics does not use real information and has no affiliation with any existing company, organization, or individual.
-Any resemblance to real entities is purely coincidental.
+- Data Visualization: SVG charts for financial analysis (income vs. expenses) and sales channel distribution (pie chart).
+
+- Contract Management: Dynamic table of recent contracts with detailed functionality via an interactive modal.
+
+- Activity Feed: Chronological record of operational events with category filters.
+
+- Time Filters: Options to visualize data by periods (7, 30, 90 days, 1 year) with dynamic KPI updates.
+
+- Toast Notifications: Visual feedback system for user interactions.
+
+- Responsive Navigation: Adaptive sidebar navigation, with a hamburger menu for mobile devices, ensuring a consistent user experience across all screen sizes.
+
+- Real-time Clock: Last update indicator with a clock that updates every second, simulating live data.
+
+Technology Stack:
+This project was developed using a pure frontend stack, demonstrating a deep command of fundamental web technologies:
+
+- HTML5: Semantic structuring of content.
+
+- CSS3: Advanced styling, including CSS variables, animations, transitions, and a responsive design system based on media queries for fluid adaptation to various devices.
+
+- JavaScript (ES6+): Implementation of all interactive logic, DOM manipulation, event handling, and simulation of backend functionalities (filters, modals, data updates).
+
+Data Architecture and API Simulation:
+For this prototype, the data presented in the dashboard (KPIs, contracts, activity) is simulated (mock data) and managed directly in the frontend. This approach was chosen to:
+
+- Demonstrate the interface's ability to consume and represent structured data, regardless of its origin.
+
+- Facilitate frontend development and debugging without relying on an active backend.
+
+- Prepare the application for future and direct integration with a real RESTful API, as the code structure is designed to decouple the presentation layer from the data layer. UI filtering and update functions are built to interact with a data model that can be easily replaced by calls to a backend service.
 
 Here is the link to the page so you can try it out:
 https://nexusanalitycs.netlify.app/
