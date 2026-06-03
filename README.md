@@ -25,26 +25,44 @@ https://nexusanalitycs.netlify.app/
 
 Español:
 
-¿Para qué sirve?
-Nexus Analytics es una plataforma de monitoreo empresarial diseñada para brindar a directivos y gerentes una visión consolidada del rendimiento de la organización. 
-Permite acceder a métricas clave y reportes visuales en tiempo real desde una única interfaz, reduciendo la dependencia de hojas de cálculo y reportes manuales.
+Descripción General:
+Nexus Analytics es una plataforma de monitoreo empresarial interactiva y responsiva, diseñada para proporcionar a directivos y gerentes una visión consolidada y en tiempo real del rendimiento organizacional. Su objetivo es centralizar métricas clave y reportes visuales en una única interfaz, minimizando la dependencia de hojas de cálculo y procesos de reporte manuales. Este proyecto demuestra la capacidad de construir interfaces de usuario complejas y funcionales, con un enfoque en la visualización de datos y la interactividad.
 
-¿Cómo funciona?
-La aplicación se organiza en tres áreas principales. 
-A la izquierda se encuentra un menú de navegación con módulos como Analytics, Reportes, Clientes y Ventas, simulando la estructura de una plataforma empresarial real. 
-En la parte superior se ubica una barra de estado con indicadores de actualización en tiempo real.
+Características Destacadas:
 
-El panel principal presenta la información en cuatro niveles:
-- KPIs estratégicos: ingresos, clientes activos, tasa de conversión y NPS, acompañados por indicadores visuales de tendencia.
-- Análisis financiero: gráfico comparativo de ingresos y gastos para evaluar la evolución mensual del negocio.
-- Distribución de canales: visualización de las fuentes de ventas mediante un gráfico circular.
-- Actividad operativa: tabla de contratos recientes y registro cronológico de eventos relevantes dentro de la organización.
+•Dashboard Interactivo: Presentación de KPIs estratégicos (ingresos, clientes activos, tasa de conversión, NPS) con indicadores visuales de tendencia.
 
-Aviso:
-Este proyecto fue desarrollado con fines educativos y de demostración. Todos los datos, métricas, nombres de empresas, clientes, contratos y estadísticas mostrados dentro de la aplicación son completamente ficticios y fueron creados únicamente para ilustrar el funcionamiento de la plataforma.
-Nexus Analytics no utiliza información real ni mantiene relación con ninguna empresa, organización o persona existente.
-Cualquier similitud con entidades reales es mera coincidencia.
+•Visualización de Datos: Gráficos SVG para análisis financiero (ingresos vs. gastos) y distribución de canales de venta (gráfico circular).
 
+•Gestión de Contratos: Tabla dinámica de contratos recientes con funcionalidad de detalle mediante un modal interactivo.
+
+•Feed de Actividad: Registro cronológico de eventos operativos con filtros por categoría.
+
+•Filtros de Tiempo: Opciones para visualizar datos por períodos (7, 30, 90 días, 1 año) con actualización dinámica de los KPIs.
+
+•Notificaciones Toast: Sistema de feedback visual para las interacciones del usuario.
+
+•Navegación Responsiva: Sidebar de navegación adaptable, con menú tipo hamburger para dispositivos móviles, asegurando una experiencia de usuario consistente en cualquier tamaño de pantalla.
+
+•Reloj en Tiempo Real: Indicador de última actualización con un reloj que se actualiza cada segundo, simulando datos en vivo.
+
+Stack Tecnológico:
+Este proyecto fue desarrollado utilizando un stack de frontend puro, demostrando un dominio profundo de las tecnologías web fundamentales:
+
+•HTML5: Estructuración semántica del contenido.
+
+•CSS3: Estilización avanzada, incluyendo variables CSS, animaciones, transiciones y un sistema de diseño responsivo basado en media queries para una adaptación fluida a diversos dispositivos.
+
+•JavaScript (ES6+): Implementación de toda la lógica interactiva, manipulación del DOM, gestión de eventos, y simulación de funcionalidades de backend (filtros, modales, actualizaciones de datos).
+
+Arquitectura de Datos y Simulación de API:
+Para este prototipo, los datos presentados en el dashboard (KPIs, contratos, actividad) son simulados (mock data) y gestionados directamente en el frontend. Esta aproximación fue elegida para:
+
+1.Demostrar la capacidad de la interfaz para consumir y representar datos estructurados, independientemente de su origen.
+
+2.Facilitar el desarrollo y la depuración del frontend sin depender de un backend activo.
+
+3.Preparar la aplicación para una integración futura y directa con una API RESTful real, ya que la estructura del código está diseñada para desacoplar la capa de presentación de la capa de datos. Las funciones de filtrado y actualización de la UI están construidas para interactuar con un modelo de datos que puede ser fácilmente reemplazado por llamadas a un servicio de backend.
 
 Aquí tienes el enlace a la página para que puedas probarlo:
 https://nexusanalitycs.netlify.app/
