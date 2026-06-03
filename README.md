@@ -21,6 +21,7 @@ Key Features:
 - Real-time Clock: Last update indicator with a clock that updates every second, simulating live data.
 
 Technology Stack:
+
 This project was developed using a pure frontend stack, demonstrating a deep command of fundamental web technologies:
 
 - HTML5: Semantic structuring of content.
@@ -30,6 +31,7 @@ This project was developed using a pure frontend stack, demonstrating a deep com
 - JavaScript (ES6+): Implementation of all interactive logic, DOM manipulation, event handling, and simulation of backend functionalities (filters, modals, data updates).
 
 Data Architecture and API Simulation:
+
 For this prototype, the data presented in the dashboard (KPIs, contracts, activity) is simulated (mock data) and managed directly in the frontend. This approach was chosen to:
 
 - Demonstrate the interface's ability to consume and represent structured data, regardless of its origin.
