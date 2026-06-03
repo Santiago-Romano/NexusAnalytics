@@ -62,11 +62,11 @@ Este proyecto fue desarrollado utilizando un stack de frontend puro, demostrando
 Arquitectura de Datos y Simulación de API:
 Para este prototipo, los datos presentados en el dashboard (KPIs, contratos, actividad) son simulados (mock data) y gestionados directamente en el frontend. Esta aproximación fue elegida para:
 
-1- Demostrar la capacidad de la interfaz para consumir y representar datos estructurados, independientemente de su origen.
+- Demostrar la capacidad de la interfaz para consumir y representar datos estructurados, independientemente de su origen.
 
-2- Facilitar el desarrollo y la depuración del frontend sin depender de un backend activo.
+- Facilitar el desarrollo y la depuración del frontend sin depender de un backend activo.
 
-3- Preparar la aplicación para una integración futura y directa con una API REST full real, ya que la estructura del código está diseñada para desacoplar la capa de presentación de la capa de datos. Las funciones de filtrado y actualización de la UI están construidas para interactuar con un modelo de datos que puede ser fácilmente reemplazado por llamadas a un servicio de backend.
+- Preparar la aplicación para una integración futura y directa con una API REST full real, ya que la estructura del código está diseñada para desacoplar la capa de presentación de la capa de datos. Las funciones de filtrado y actualización de la UI están construidas para interactuar con un modelo de datos que puede ser fácilmente reemplazado por llamadas a un servicio de backend.
 
 Aquí tienes el enlace a la página para que puedas probarlo:
 https://nexusanalitycs.netlify.app/
