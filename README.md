@@ -46,6 +46,7 @@ Características Destacadas:
 
 •Reloj en Tiempo Real: Indicador de última actualización con un reloj que se actualiza cada segundo, simulando datos en vivo.
 
+
 Stack Tecnológico:
 Este proyecto fue desarrollado utilizando un stack de frontend puro, demostrando un dominio profundo de las tecnologías web fundamentales:
 
@@ -54,6 +55,7 @@ Este proyecto fue desarrollado utilizando un stack de frontend puro, demostrando
 •CSS3: Estilización avanzada, incluyendo variables CSS, animaciones, transiciones y un sistema de diseño responsivo basado en media queries para una adaptación fluida a diversos dispositivos.
 
 •JavaScript (ES6+): Implementación de toda la lógica interactiva, manipulación del DOM, gestión de eventos, y simulación de funcionalidades de backend (filtros, modales, actualizaciones de datos).
+
 
 Arquitectura de Datos y Simulación de API:
 Para este prototipo, los datos presentados en el dashboard (KPIs, contratos, actividad) son simulados (mock data) y gestionados directamente en el frontend. Esta aproximación fue elegida para:
